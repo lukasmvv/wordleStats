@@ -45,12 +45,9 @@ for i, (name, data) in enumerate(dataDict.items()):
     scores = data['scores']
     hardmode = data['hardmode']
 
-    print(scores)
-    scoreCounts = [scores.count(y) for y in range(1, 7)]
-    scoreLabels = [str(y) for y in range(1,7)]
+    scoreCounts = [scores.count(y) for y in range(1, 8)]
+    scoreLabels = [str(y) for y in range(1,8)]
 
-    print(scoreCounts)
-    print(scoreLabels)
     plt.subplot(2, 2, i+1)
     # plt.plot(dates, scores, marker='o', label=f'Scores ({name})')
     plt.pie(scoreCounts, labels=scoreLabels, autopct='%1.1f%%', startangle=90)
